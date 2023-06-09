@@ -1,0 +1,75 @@
+.promo
+    min-height: 650px
+    padding: 20px 0 90px 0
+    background: url("../../img/bg/first_screen_bg.jpg") center center / cover no-repeat
+    &__right
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        margin-top: 90px
+    &__h1
+        font-weight: 700
+        font-size: 42px
+        text-align: right
+        text-transform: uppercase
+        color: #FFFFFF
+        margin-bottom: 60px
+        span
+            font-weight: 500
+            font-size: 24px
+    &__icons
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 65px
+    &__iconwrapper
+        flex-basis: 30%
+    &__icon
+        display: block
+        margin: 0 auto
+    &__icontext
+        font-weight: 500
+        font-size: 14px
+        line-height: 14px
+        text-align: center
+        color: #FFFFFF
+    &__catalog
+        margin-top: 8px
+        span
+            font-weight: 500
+            font-size: 16px
+            text-align: right
+            color: #FFFFFF
+            text-decoration: none
+        a
+            font-weight: 500
+            font-size: 16px
+            text-align: right
+            color: #FFFFFF
+@media (max-width: 1200px)
+    .promo
+        padding-right: 20px
+@media (max-width: 576px)
+    .promo
+        padding: 10px 0 30px 0
+        &__right
+            align-items: center
+        &__h1
+            font-size: 30px
+            text-align: center
+            text-transform: uppercase
+            color: #FFFFFF
+            margin-bottom: 30px
+        span
+            font-weight: 500
+            font-size: 16px
+@media (max-width: 400px)
+    .promo
+        &__h1
+            font-size: 24px
+            margin-bottom: 20px
+        span
+            font-weight: 500
+            font-size: 14px
+
+    
