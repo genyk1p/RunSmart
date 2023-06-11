@@ -6,6 +6,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const rename = require("gulp-rename");
 const replace = require('gulp-replace');
 const path = require('path');
+const exec = require('gulp-exec');
 
 gulp.task('server', function() {
     browserSync.init({
@@ -33,5 +34,11 @@ gulp.task('replace', function() {
         .pipe(browserSync.stream());
     });
 });
+// Задача для выполнения npx webpack
+gulp.task('webpack', function() {
+  return gulp.src('.')
+    .pipe(exec('npx webpack'))
+    .pipe(exec.reporter());
+});
 
-gulp.task('default', gulp.parallel('server', 'replace'));
+gulp.task('default', gulp.parallel('server', 'replace', 'webpack'));
