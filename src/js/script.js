@@ -9,6 +9,9 @@ document.addEventListener("DOMContentLoaded", () =>{
       if (document.documentElement.clientWidth <= 768){
         left.style.display = "none";
         right.style.display = "none";
+      } else {
+        left.style.display = "block";
+        right.style.display = "block";
       }
     }
     hidArow();
