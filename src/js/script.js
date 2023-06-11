@@ -20,10 +20,7 @@ document.addEventListener("DOMContentLoaded", () =>{
         controls: false,
         nav: false,
         mouseDrag: true,
-        autoplay: true,
         speed: 1000,
-        autoplayTimeout: 5000,
-        autoplayButtonOutput: false,
       });
     left.addEventListener("click", () =>{
       slider.goTo("prev")
@@ -35,4 +32,7 @@ document.addEventListener("DOMContentLoaded", () =>{
       hidArow();
       slider.refresh(); // Обновить слайдер
     });
+    setInterval(()=>{
+      slider.goTo("next")
+    }, 10000)
 });
