@@ -127,7 +127,7 @@ function cards (method='obj') {
                                 <div class="card__old-price">${this.oldPrice} EURO</div>
                                 <div class="card__new-price">${this.newPrice} EURO</div>
                             </div>
-                            <button class="button button_buy">Купить</button>
+                            <button class="button button_buy" data-btn="btn-buy">Купить</button>
                         </div>
             `;
             this.wraper.append(div);
