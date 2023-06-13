@@ -7,6 +7,7 @@ const rename = require("gulp-rename");
 const replace = require('gulp-replace');
 const path = require('path');
 const exec = require('gulp-exec');
+const shell = require('gulp-shell');
 
 gulp.task('server', function() {
     browserSync.init({
@@ -40,5 +41,6 @@ gulp.task('webpack', function() {
     .pipe(exec('npx webpack'))
     .pipe(exec.reporter());
 });
+gulp.task('json-server', shell.task('json-server --watch db.json --port 4000'));
 
-gulp.task('default', gulp.parallel('server', 'replace', 'webpack'));
+gulp.task('default', gulp.parallel('json-server', 'server', 'replace', 'webpack'));
