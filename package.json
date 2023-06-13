@@ -26,6 +26,7 @@
     "> 1%"
   ],
   "dependencies": {
+    "json-server": "^0.17.3",
     "tiny-slider": "^2.9.4"
   }
 }
