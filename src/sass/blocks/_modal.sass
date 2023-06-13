@@ -1,5 +1,4 @@
 .modal
-    // position: relative
     &__overlay
         background: rgba(0,0,0, 0.56)
         position: fixed
@@ -50,12 +49,21 @@
         margin-bottom: 25px
         &_small
             margin-bottom: 0
-    &_small
+@media (max-width: 576px)
+    .modal
         &__item-wrapper
-            min-height: 143px
-            padding: 35px 70px
-
-
+            padding: 10px
+            position: absolute
+            width: 270px
+            min-height: 402px
+        &__cross
+            right: 0px
+            top: -15px
+            font-size: 30px
+        &__item-wrapper
+            &_small
+                min-height: 110px
+                padding: 10px
             
 #modal-call-back, #modal-buy, #modal-thanks
     display: none
