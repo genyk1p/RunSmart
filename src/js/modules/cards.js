@@ -1,5 +1,91 @@
-function cards () {
-    // Динамически формируем карточки меню
+// Функция строит карточки, в качестве аргументов можно передать, либо "obj" либо "fetch". Если obj тогда данные для построения карточек будут взяты из локального обьекта data
+function cards (method='obj') {
+    // Если получаем данные дистанциооно, то в url надо указать путь для получения данных
+    const url = "http://localhost:4000/cards";
+    const data = {
+        cards: [
+          {
+            img: "img/polar.jpg",
+            altimg: "polar",
+            cardInfo: "Пульсометр Polar FT1'",
+            cardText: "Для первых шагов в тренировках, основанных на сердечном ритме",
+            oldPrice: 60,
+            newPrice: 50,
+            li1: "Вы услышите звуковое оповещение о нужном пульсе во время тренировки;",
+            li2: "Вы увидите информативный графический индикатор целевых тренировочных зон пульса;",
+            li3: "Также Вы увидите информацию о расходе калорий за тренировку;",
+            li4: "Вы сможете посмотреть данные по 10 тренировкам.",
+            category: "fitness"
+          },
+          {
+            img: "img/polar.jpg",
+            altimg: "polar",
+            cardInfo: "Пульсометр Suunto M2'",
+            cardText: "Для первых шагов в тренировках, основанных на сердечном ритме",
+            oldPrice: 70,
+            newPrice: 60,
+            li1: "Вы услышите звуковое оповещение о нужном пульсе во время тренировки;",
+            li2: "Вы увидите информативный графический индикатор целевых тренировочных зон пульса;",
+            li3: "Также Вы увидите информацию о расходе калорий за тренировку;",
+            li4: "Вы сможете посмотреть данные по 10 тренировкам.",
+            category: "run"
+          },
+          {
+            img: "img/polar.jpg",
+            altimg: "polar",
+            cardInfo: "Пульсометр Polar FT1",
+            cardText: "Для первых шагов в тренировках, основанных на сердечном ритме",
+            oldPrice: 40,
+            newPrice: 30,
+            li1: "Вы услышите звуковое оповещение о нужном пульсе во время тренировки;",
+            li2: "Вы увидите информативный графический индикатор целевых тренировочных зон пульса;",
+            li3: "Также Вы увидите информацию о расходе калорий за тренировку;",
+            li4: "Вы сможете посмотреть данные по 10 тренировкам.",
+            category: "triathlon"
+          },
+          {
+            img: "img/polar.jpg",
+            altimg: "polar",
+            cardInfo: "Пульсометр Polar FT1'",
+            cardText: "Для первых шагов в тренировках, основанных на сердечном ритме",
+            oldPrice: 60,
+            newPrice: 50,
+            li1: "Вы услышите звуковое оповещение о нужном пульсе во время тренировки;",
+            li2: "Вы увидите информативный графический индикатор целевых тренировочных зон пульса;",
+            li3: "Также Вы увидите информацию о расходе калорий за тренировку;",
+            li4: "Вы сможете посмотреть данные по 10 тренировкам.",
+            category: "fitness"
+          },
+          {
+            img: "img/polar.jpg",
+            altimg: "polar",
+            cardInfo: "Пульсометр Suunto M2'",
+            cardText: "Для первых шагов в тренировках, основанных на сердечном ритме",
+            oldPrice: 70,
+            newPrice: 60,
+            li1: "Вы услышите звуковое оповещение о нужном пульсе во время тренировки;",
+            li2: "Вы увидите информативный графический индикатор целевых тренировочных зон пульса;",
+            li3: "Также Вы увидите информацию о расходе калорий за тренировку;",
+            li4: "Вы сможете посмотреть данные по 10 тренировкам.",
+            category: "run"
+          },
+          {
+            img: "img/polar.jpg",
+            altimg: "polar",
+            cardInfo: "Пульсометр Polar FT1",
+            cardText: "Для первых шагов в тренировках, основанных на сердечном ритме",
+            oldPrice: 40,
+            newPrice: 30,
+            li1: "Вы услышите звуковое оповещение о нужном пульсе во время тренировки;",
+            li2: "Вы увидите информативный графический индикатор целевых тренировочных зон пульса;",
+            li3: "Также Вы увидите информацию о расходе калорий за тренировку;",
+            li4: "Вы сможете посмотреть данные по 10 тренировкам.",
+            category: "triathlon"
+          }
+        ]
+      }
+
+    // Динамически формируем карточки
     const menuWraper = document.querySelector(".catalog__cards");
     class Menu {
         constructor(img, alt, cardInfo, cardText, oldPrice, newPrice, li1, li2, li3, li4, wraper) {
@@ -47,29 +133,55 @@ function cards () {
             this.wraper.append(div);
         }
     }
-    function createMenu(filter='all'){
-        menuWraper.innerHTML = '';
-        fetch("http://localhost:4000/cards")
-        .then(data => data.json())
-        .then(data =>{
-            if (filter == 'all'){
-                data.forEach(card =>{
-                    new Menu(card.img, card.alt, card.cardInfo, card.cardText, card.oldPrice, card.newPrice, card.li1, card.li2, card.li3, card.li4, menuWraper).render();
-                });
-            } else {
-                data.filter((item)=>(item.category == filter)).forEach(card =>{
-                    new Menu(card.img, card.alt, card.cardInfo, card.cardText, card.oldPrice, card.newPrice, card.li1, card.li2, card.li3, card.li4, menuWraper).render();
-                });
-            }
-            document.querySelectorAll(".card").forEach(card =>{
-                card.classList.add("card_show")
-            })
-        });
+    // Функция добаляет клас для отображения карточки, он необходима для плавной анимации появления карточки
+    function addShowClass () {
+        document.querySelectorAll(".card").forEach(card =>{
+            card.classList.add("card_show")
+        })
+    }
+    // функция добаляет клас внутри карточки который передвигает содержимое карточки вправо или влево когда мы нажимаем на кнопки ПОДРОБНЕЕ или назад
+    function addEventListener () {
         document.addEventListener("click", (e)=>{
             if (e.target && (e.target.classList.contains("card__inspect") || e.target.classList.contains("card__back"))){
                 e.target.parentElement.parentElement.classList.toggle("card__content-wrapper_translate")
             }
         })
+    }
+
+    // Функция принимает на вход метод получения данных и фильтр для фильтрации карточек, и рендерит карточки
+    function renderPage({method='fetch', filter='all'}) {
+        if(method==='fetch'){
+            fetch(url)
+            .then(data => data.json())
+            .then(data =>{
+                if (filter == 'all'){
+                    data.forEach(card =>{
+                        new Menu(card.img, card.alt, card.cardInfo, card.cardText, card.oldPrice, card.newPrice, card.li1, card.li2, card.li3, card.li4, menuWraper).render();
+                    });
+                } else {
+                    data.filter((item)=>(item.category == filter)).forEach(card =>{
+                        new Menu(card.img, card.alt, card.cardInfo, card.cardText, card.oldPrice, card.newPrice, card.li1, card.li2, card.li3, card.li4, menuWraper).render();
+                    });
+                }
+                addShowClass ();
+            });
+        } else {
+            if (filter == 'all'){
+                data.cards.forEach(card =>{
+                    new Menu(card.img, card.alt, card.cardInfo, card.cardText, card.oldPrice, card.newPrice, card.li1, card.li2, card.li3, card.li4, menuWraper).render();
+                });
+            } else {
+                data.cards.filter((item)=>(item.category == filter)).forEach(card =>{
+                    new Menu(card.img, card.alt, card.cardInfo, card.cardText, card.oldPrice, card.newPrice, card.li1, card.li2, card.li3, card.li4, menuWraper).render();
+                });
+            }
+            addShowClass ();
+        }
+        addEventListener ()
+    }
+    function createMenu(filter='all'){
+        menuWraper.innerHTML = '';
+        renderPage({method: method, filter: filter})
     }
     createMenu();
     document.addEventListener('click', (e)=>{
@@ -91,8 +203,6 @@ function cards () {
                 default:
                     createMenu();
             }
-            console.log(document.querySelectorAll(".card"))
-            
         }
     })
 }
