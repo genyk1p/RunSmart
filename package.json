@@ -27,6 +27,8 @@
     "> 1%"
   ],
   "dependencies": {
+    "@upjs/facile-validator": "^1.10.0",
+    "imask": "^6.6.3",
     "json-server": "^0.17.3",
     "tiny-slider": "^2.9.4"
   }

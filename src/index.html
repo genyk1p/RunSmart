@@ -89,10 +89,10 @@
                 <div class="consultation__text">
                     Просто заполните форму заявки и мы перезвоним вам в течении 10 минут
                 </div>
-                <form action="" class="form">
-                    <input type="text" name="name" placeholder="Ваше имя">
-                    <input type="number" name="phone" placeholder="Ваш телефон">
-                    <input type="email" name="email" placeholder="Ваш E-mail">
+                <form action="" class="form" id="call-back-form">
+                    <input data-rules="bail|required|" type="text" name="name" placeholder="Ваше имя">
+                    <input data-rules="required|size:16" class="form__phone" type="text" name="phone" placeholder="Ваш телефон" ">
+                    <input data-rules="required|email" type="email" name="email" placeholder="Ваш E-mail">
                     <button class="button button_submit" data-btn="thanks-modal">заказать кОНСУЛЬТАЦИЮ</button>
                 </form>
             </div>
@@ -170,9 +170,9 @@
                 <div class="modal__title">Просто заполните форму заявки</div>
                 <div class="modal__sub-title">и мы перезвоним вам в течении 10 минут</div>
                 <form action="" class="form form-modal">
-                    <input type="text" name="name" placeholder="Ваше имя">
-                    <input type="number" name="phone" placeholder="Ваш телефон">
-                    <input type="email" name="email" placeholder="Ваш E-mail">
+                    <input data-rules="bail|required| type="text" name="name" placeholder="Ваше имя">
+                    <input data-rules="required|size:16" class="form__phone" type="text" name="phone" placeholder="Ваш телефон">
+                    <input data-rules="required|email" type="email" name="email" placeholder="Ваш E-mail">
                     <button class="button button_submit" data-btn="modal-call-back-btn">заказать кОНСУЛЬТАЦИЮ</button>
                 </form>
             </div>
@@ -185,9 +185,9 @@
                 <div class="modal__title">Ваш заказ:</div>
                 <div class="modal__sub-title">Пульсометр Polar FT1</div>
                 <form action="" class="form form-modal">
-                    <input type="text" name="name" placeholder="Ваше имя">
-                    <input type="number" name="phone" placeholder="Ваш телефон">
-                    <input type="email" name="email" placeholder="Ваш E-mail">
+                    <input data-rules="bail|required| type="text" name="name" placeholder="Ваше имя">
+                    <input data-rules="required|size:16" class="form__phone" type="text" name="phone" placeholder="Ваш телефон">
+                    <input data-rules="required|email" type="email" type="email" name="email" placeholder="Ваш E-mail">
                     <button class="button button_submit">Купить</button>
                 </form>
             </div>
