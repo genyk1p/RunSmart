@@ -7,79 +7,79 @@ function cards (method='obj') {
           {
             img: "img/polar.jpg",
             altimg: "polar",
-            cardInfo: "Пульсометр Polar FT1'",
-            cardText: "Для первых шагов в тренировках, основанных на сердечном ритме",
+            cardInfo: "Polar FT1 heart rate monitor'",
+            cardText: "For the first steps in heart rate training",
             oldPrice: 60,
             newPrice: 50,
-            li1: "Вы услышите звуковое оповещение о нужном пульсе во время тренировки;",
-            li2: "Вы увидите информативный графический индикатор целевых тренировочных зон пульса;",
-            li3: "Также Вы увидите информацию о расходе калорий за тренировку;",
-            li4: "Вы сможете посмотреть данные по 10 тренировкам.",
+            li1: "You will hear a sound notification about the desired heart rate during training;",
+            li2: "You will see an informative graphical indicator of target training heart rate zones;",
+            li3: "You will also see information about the calorie consumption per workout;",
+            li4: "You can view data for 10 workouts.",
             category: "fitness"
           },
           {
             img: "img/polar.jpg",
             altimg: "polar",
-            cardInfo: "Пульсометр Suunto M2'",
-            cardText: "Для первых шагов в тренировках, основанных на сердечном ритме",
+            cardInfo: "Heart rate monitor Suunto M2'",
+            cardText: "For the first steps in heart rate training",
             oldPrice: 70,
             newPrice: 60,
-            li1: "Вы услышите звуковое оповещение о нужном пульсе во время тренировки;",
-            li2: "Вы увидите информативный графический индикатор целевых тренировочных зон пульса;",
-            li3: "Также Вы увидите информацию о расходе калорий за тренировку;",
-            li4: "Вы сможете посмотреть данные по 10 тренировкам.",
+            li1: "You will hear a sound notification about the desired heart rate during training;",
+            li2: "You will see an informative graphical indicator of target training heart rate zones;",
+            li3: "You will also see information about the calorie consumption per workout;",
+            li4: "You can view data for 10 workouts.",
             category: "run"
           },
           {
             img: "img/polar.jpg",
             altimg: "polar",
-            cardInfo: "Пульсометр Polar FT1",
-            cardText: "Для первых шагов в тренировках, основанных на сердечном ритме",
+            cardInfo: "Polar FT1 heart rate monitor",
+            cardText: "For the first steps in heart rate training",
             oldPrice: 40,
             newPrice: 30,
-            li1: "Вы услышите звуковое оповещение о нужном пульсе во время тренировки;",
-            li2: "Вы увидите информативный графический индикатор целевых тренировочных зон пульса;",
-            li3: "Также Вы увидите информацию о расходе калорий за тренировку;",
-            li4: "Вы сможете посмотреть данные по 10 тренировкам.",
+            li1: "You will hear a sound notification about the desired heart rate during training;",
+            li2: "You will see an informative graphical indicator of target training heart rate zones;",
+            li3: "You will also see information about the calorie consumption per workout;",
+            li4: "You can view data for 10 workouts.",
             category: "triathlon"
           },
           {
             img: "img/polar.jpg",
             altimg: "polar",
-            cardInfo: "Пульсометр Polar FT1'",
-            cardText: "Для первых шагов в тренировках, основанных на сердечном ритме",
+            cardInfo: "Polar FT1 heart rate monitor'",
+            cardText: "For the first steps in heart rate training",
             oldPrice: 60,
             newPrice: 50,
-            li1: "Вы услышите звуковое оповещение о нужном пульсе во время тренировки;",
-            li2: "Вы увидите информативный графический индикатор целевых тренировочных зон пульса;",
-            li3: "Также Вы увидите информацию о расходе калорий за тренировку;",
-            li4: "Вы сможете посмотреть данные по 10 тренировкам.",
+            li1: "You will hear a sound notification about the desired heart rate during training;",
+            li2: "You will see an informative graphical indicator of target training heart rate zones;",
+            li3: "You will also see information about the calorie consumption per workout;",
+            li4: "You can view data for 10 workouts.",
             category: "fitness"
           },
           {
             img: "img/polar.jpg",
             altimg: "polar",
-            cardInfo: "Пульсометр Suunto M2'",
-            cardText: "Для первых шагов в тренировках, основанных на сердечном ритме",
+            cardInfo: "Heart rate monitor Suunto M2'",
+            cardText: "For the first steps in heart rate training",
             oldPrice: 70,
             newPrice: 60,
-            li1: "Вы услышите звуковое оповещение о нужном пульсе во время тренировки;",
-            li2: "Вы увидите информативный графический индикатор целевых тренировочных зон пульса;",
-            li3: "Также Вы увидите информацию о расходе калорий за тренировку;",
-            li4: "Вы сможете посмотреть данные по 10 тренировкам.",
+            li1: "You will hear a sound notification about the desired heart rate during training;",
+            li2: "You will see an informative graphical indicator of target training heart rate zones;",
+            li3: "You will also see information about the calorie consumption per workout;",
+            li4: "You can view data for 10 workouts.",
             category: "run"
           },
           {
             img: "img/polar.jpg",
             altimg: "polar",
-            cardInfo: "Пульсометр Polar FT1",
-            cardText: "Для первых шагов в тренировках, основанных на сердечном ритме",
+            cardInfo: "Polar FT1 heart rate monitor",
+            cardText: "For the first steps in heart rate training",
             oldPrice: 40,
             newPrice: 30,
-            li1: "Вы услышите звуковое оповещение о нужном пульсе во время тренировки;",
-            li2: "Вы увидите информативный графический индикатор целевых тренировочных зон пульса;",
-            li3: "Также Вы увидите информацию о расходе калорий за тренировку;",
-            li4: "Вы сможете посмотреть данные по 10 тренировкам.",
+            li1: "You will hear a sound notification about the desired heart rate during training;",
+            li2: "You will see an informative graphical indicator of target training heart rate zones;",
+            li3: "You will also see information about the calorie consumption per workout;",
+            li4: "You can view data for 10 workouts.",
             category: "triathlon"
           }
         ]
@@ -111,14 +111,14 @@ function cards (method='obj') {
                                 <img src=${this.img} alt="${this.alt}">
                                 <div class="card__info">${this.cardInfo}</div>
                                 <div class="card__text">${this.cardText}</div>
-                                <div class="card__inspect">ПОДРОБНЕЕ</div>
+                                <div class="card__inspect">LEARN MORE</div>
                             </div>
                             <ul class="card__description">
                                 <li>${this.li1}</li>
                                 <li>${this.li2}</li>
                                 <li>${this.li3}</li>
                                 <li>${this.li4}</li>
-                                <div class="card__back">НАЗАД</div>
+                                <div class="card__back">BACK</div>
                             </ul>
                         </div>
                         <hr>
@@ -127,7 +127,7 @@ function cards (method='obj') {
                                 <div class="card__old-price">${this.oldPrice} EURO</div>
                                 <div class="card__new-price">${this.newPrice} EURO</div>
                             </div>
-                            <button class="button button_buy" data-btn="btn-buy">Купить</button>
+                            <button class="button button_buy" data-btn="btn-buy">Buy</button>
                         </div>
             `;
             this.wraper.append(div);
