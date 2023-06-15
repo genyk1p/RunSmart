@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap-reboot.min.css" integrity="sha512-allly0sW31f5fb2FdiSuezu/pLSoV8hN0liPTS5PAeB39hxh5S6yDf6ak7ge77JkfnOkiFNfjdXDyx6sEzz08A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap-reboot.min.css" integrity="sha512-allly0sW31f5fb2FdiSuezu/pLSoV8hN0liPTS5PAeB39hxh5S6yDf6ak7ge77JkfnOkiFNfjdXDyx6sEzz08A==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/tiny-slider.css">
     <link rel="stylesheet" href="css/style.min.css">
@@ -20,7 +20,7 @@
                     <span>Garmin, Polar, Suunto</span>
                 </div>
                 <div class="header__contacts">
-                    <a class="header__phone href="tel:+420992289741">+420 992 289 741</a>
+                    <a class="header__phone" href="tel:+420992289741">+420 992 289 741</a>
                     <button class="button" data-btn="call-back">заказать звонок</button>
                 </div>
             </header>
@@ -89,16 +89,16 @@
                 <div class="consultation__text">
                     Just fill out the application form and we will call you back within 10 minutes
                 </div>
-                <form action="" class="form" id="call-back-form">
+                <form action="#" class="form" id="call-back-form">
                     <input data-rules="bail|required|" type="text" name="name" placeholder="Your name">
-                    <input data-rules="required|size:16" class="form__phone" type="text" name="phone" placeholder="Your phone number" ">
+                    <input data-rules="required|size:16" class="form__phone" type="text" name="phone" placeholder="Your phone number">
                     <input data-rules="required|email" type="email" name="email" placeholder="Your Email">
                     <button class="button button_submit" data-btn="thanks-modal">order a CONSULTATION</button>
                 </form>
             </div>
         </div>
     </section>
-    <section class="slider">
+    <div class="slider">
         <div class="container">
             <div class="slider__wrapper">
                 <div class="slider__inner">
@@ -109,7 +109,7 @@
                 <img class="slider__right" src="img/slids/right.png" alt="Right slider arrow">
             </div>
         </div>
-    </section>
+    </div>
     <section class="catalog">
         <div class="container">
             <h2 class="tittle tittle_catalog">Catalog of heart rate monitors</h2>
@@ -160,7 +160,7 @@
                 <a href="#"><img src="icons/pinterest.svg" alt="pinterest icon"></a>
             </div>
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5226.887523954272!2d17.442789816381755!3d49.07820699975513!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471314205ab5a8e7%3A0x700b4df59ab52bf0!2sSouth%20Moravian%20Museum%20-%20Memorial%20of%20Great%20Moravia!5e0!3m2!1sru!2scz!4v1686671030777!5m2!1sru!2scz" width="100%" height="630" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5226.887523954272!2d17.442789816381755!3d49.07820699975513!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471314205ab5a8e7%3A0x700b4df59ab52bf0!2sSouth%20Moravian%20Museum%20-%20Memorial%20of%20Great%20Moravia!5e0!3m2!1sru!2scz!4v1686671030777!5m2!1sru!2scz" >
         </iframe>
     </footer>
     <div class="modal" id="modal-call-back">
@@ -169,8 +169,8 @@
                 <div class="modal__cross">&times;</div>
                 <div class="modal__title">Just fill out the application form</div>
                 <div class="modal__sub-title">and we will call you back within 10 minutes</div>
-                <form action="" class="form form-modal">
-                    <input data-rules="bail|required| type="text" name="name" placeholder="Your name">
+                <form action="#" class="form form-modal">
+                    <input data-rules="bail|required|" type="text" name="name" placeholder="Your name">
                     <input data-rules="required|size:16" class="form__phone" type="text" name="phone" placeholder="Your phone number">
                     <input data-rules="required|email" type="email" name="email" placeholder="Your Email">
                     <button class="button button_submit" data-btn="modal-call-back-btn">order a CONSULTATION</button>
@@ -184,10 +184,10 @@
                 <div class="modal__cross">&times;</div>
                 <div class="modal__title">Your order:</div>
                 <div class="modal__sub-title">Polar FT1 heart rate monitor</div>
-                <form action="" class="form form-modal">
-                    <input data-rules="bail|required| type="text" name="name" placeholder="Your name">
+                <form action="#" class="form form-modal">
+                    <input data-rules="bail|required|" type="text" name="name" placeholder="Your name">
                     <input data-rules="required|size:16" class="form__phone" type="text" name="phone" placeholder="Your phone number">
-                    <input data-rules="required|email" type="email" type="email" name="email" placeholder="Your Email">
+                    <input data-rules="required|email" type="email" name="email" placeholder="Your Email">
                     <button class="button button_submit">Buy</button>
                 </form>
             </div>
