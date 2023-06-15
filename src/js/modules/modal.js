@@ -1,11 +1,11 @@
 import { Validator, enLang as en } from '@upjs/facile-validator';
 import IMask from 'imask';
+import sendDataToServer from '../services/services'
 function modal (){
     const callBackBtn = document.querySelectorAll(".button[data-btn='call-back']"),
           thanksModalBtn = document.querySelector(".button[data-btn='thanks-modal']"),
           modalCallBackBtn = document.querySelector(".button[data-btn='modal-call-back-btn']");
     let modalThanksTimeout;
-
     // Создаем маску на инпут телефонного номераgit
     const phoneInputs = document.querySelectorAll('.form__phone');
     phoneInputs.forEach(input =>{
@@ -13,7 +13,6 @@ function modal (){
             mask: '+{420} 000 000 000',
             });
     })
-
     // Отображает модальное окно
     function showModal(modal) {
         modal.style.display = "block";
@@ -56,6 +55,8 @@ function modal (){
         });
         v.validate();
         if(v.validatorError.errorsList.length === 0){
+            const formData = new FormData(form);
+            sendDataToServer(formData);
             form.reset();
             showThanksModal();
         }
@@ -78,6 +79,8 @@ function modal (){
         if(v.validatorError.errorsList.length === 0){
             showThanksModal();
             modalHide(modal);
+            const formData = new FormData(form);
+            sendDataToServer(formData);
             form.reset();
         }
     })
@@ -106,6 +109,8 @@ function modal (){
         if(v.validatorError.errorsList.length === 0){
             modalHide(document.querySelector("#modal-buy"));
             showThanksModal();
+            const formData = new FormData(form);
+            sendDataToServer(formData);
             form.reset();
         }
     })
