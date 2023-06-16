@@ -7,6 +7,7 @@ const rename = require("gulp-rename");
 const imagemin = require('gulp-imagemin');
 const htmlmin = require('gulp-htmlmin');
 const shell = require('gulp-shell');
+const exec = require('gulp-exec');
 
 gulp.task('server', function() {
 
@@ -16,7 +17,9 @@ gulp.task('server', function() {
         }
     });
 
-    gulp.watch("src/*.html").on('change', browserSync.reload);
+    gulp.watch("dist/*.html").on('change', browserSync.reload);
+    gulp.watch("dist/js/*.js").on('change', browserSync.reload);
+    gulp.watch("dist/css/*.css").on('change', browserSync.reload);
 });
 
 gulp.task('styles', function() {
@@ -29,9 +32,17 @@ gulp.task('styles', function() {
         .pipe(browserSync.stream());
 });
 
+// Задача для выполнения npx webpack
+gulp.task('webpack', function() {
+    return gulp.src('.')
+      .pipe(exec('npx webpack'))
+      .pipe(exec.reporter());
+  });
+
 gulp.task('watch', function() {
     gulp.watch("src/sass/**/*.+(scss|sass|css)", gulp.parallel('styles'));
     gulp.watch("src/*.html").on('change', gulp.parallel('html'));
+    gulp.watch(["src/js/bundle.js", "src/js/bundle.js.map"]).on('change', gulp.parallel('scripts'));
 });
 
 gulp.task('html', function () {
@@ -63,4 +74,4 @@ gulp.task('images', function () {
 
 gulp.task('json-server', shell.task('json-server --watch db.json --port 4000'));
 
-gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'scripts', 'fonts', 'icons', 'html', 'images', 'json-server'));
+gulp.task('default', gulp.parallel('watch', 'webpack', 'server', 'styles', 'scripts', 'fonts', 'icons', 'html', 'images', 'json-server'));

@@ -141,13 +141,13 @@ function cards (method='obj') {
     }
     // функция добаляет клас внутри карточки который передвигает содержимое карточки вправо или влево когда мы нажимаем на кнопки ПОДРОБНЕЕ или назад
     function addEventListener () {
-        document.addEventListener("click", (e)=>{
-            if (e.target && (e.target.classList.contains("card__inspect") || e.target.classList.contains("card__back"))){
+        let elements = document.querySelectorAll(".card__inspect, .card__back")
+        elements.forEach(elem =>{
+            elem.addEventListener("click", (e)=>{
                 e.target.parentElement.parentElement.classList.toggle("card__content-wrapper_translate")
-            }
+            })
         })
     }
-
     // Функция принимает на вход метод получения данных и фильтр для фильтрации карточек, и рендерит карточки
     function renderPage({method='fetch', filter='all'}) {
         if(method==='fetch'){
@@ -164,6 +164,7 @@ function cards (method='obj') {
                     });
                 }
                 addShowClass ();
+                addEventListener ()
             });
         } else {
             if (filter == 'all'){
@@ -190,14 +191,14 @@ function cards (method='obj') {
                 element.classList.remove("catalog__tab_activ")
             })
             e.target.parentElement.classList.add("catalog__tab_activ");
-            switch (e.target.innerHTML) {
-                case 'для фитнеса':
+            switch (e.target.dataset.catalog) {
+                case 'fitness':
                     createMenu("fitness");
                     break;
-                case 'для бега':
+                case 'run':
                     createMenu("run");
                     break;
-                case 'для триатлона':
+                case 'triathlon':
                     createMenu("triathlon");
                     break;
                 default:
